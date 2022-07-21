@@ -9,7 +9,8 @@
     }
   },
   "ExpandedNodes": [
-    ""
+    "",
+    "\\lib"
   ],
   "SelectedNode": "\\CMakeProject2.cpp",
   "PreviewInSolutionExplorer": false
