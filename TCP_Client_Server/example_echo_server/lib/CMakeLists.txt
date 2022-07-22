@@ -1,0 +1,1 @@
+﻿add_library(lib wrapsock.c error.c)
