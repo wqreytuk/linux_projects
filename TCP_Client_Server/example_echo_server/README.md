@@ -26,6 +26,16 @@ for (;;) {
 }
 ```
 
+when fork is called, all file descriptor in parent process is copied to child process, like dup2, so it doesn't matter if parent close `conn_fd` or not, because `conn_fd` in child process still points to the right socket
+
+and different process can use the same file descriptor, check this:
+
+![Figure 3.8 Two independent processes with the same file open](README.assets/figure_3.8_600.png)
+
+they point to the same file eventually, but they have different file offset, so it won't bother if they use the same file descriptor to read and write
+
+
+
 
 
 function `str_echo` is the main logic for client handling, it reads data sent from client and writes it back

@@ -10,7 +10,7 @@
 
 
 #define	SA			struct sockaddr
-#define SERV_PORT 	8888
+#define SERV_PORT 	8001
 #define	MAXLINE		4096	/* max text line length */
 #define	LISTENQ		1024	/* 2nd argument to listen() */
 

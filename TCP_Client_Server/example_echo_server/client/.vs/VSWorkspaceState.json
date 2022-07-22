@@ -1,10 +1,16 @@
 {
-  "ActiveTargetSystem": "192.168.100.207",
+  "ActiveTargetSystem": "192.168.10.101",
   "MRUPresetsPerTargetSystem": {
     "本地计算机": {
       "configure": "x64-debug"
     },
     "192.168.100.207": {
+      "configure": "linux-debug"
+    },
+    "192.168.10.101": {
+      "configure": "linux-debug"
+    },
+    "WSL: Ubuntu": {
       "configure": "linux-debug"
     }
   },
@@ -16,6 +22,6 @@
     "\\out\\-61972722\\build",
     "\\out\\build"
   ],
-  "SelectedNode": "\\CMakeLists.txt",
+  "SelectedNode": "\\tcpclient01.c",
   "PreviewInSolutionExplorer": false
 }

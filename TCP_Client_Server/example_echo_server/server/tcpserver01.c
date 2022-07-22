@@ -23,8 +23,9 @@ int main(int argc, char* argv[]) {
 		printf("parent listen fd: %d\n", listen_fd);
 		printf("parent connection fd: %d\n", conn_fd);
 		if (0 == (child_pid = Fork())) {
+			child_pid = getpid();
 			Close(listen_fd);
-			str_echo(conn_fd);
+			str_echo(conn_fd, child_pid);
 			printf("child listen fd: %d\n", listen_fd);
 			printf("child connection fd: %d\n", conn_fd);
 			exit(0);

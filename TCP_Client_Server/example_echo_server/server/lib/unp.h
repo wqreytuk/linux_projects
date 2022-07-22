@@ -9,7 +9,7 @@
 
 
 #define	SA			struct sockaddr
-#define SERV_PORT 	8888
+#define SERV_PORT 	8001
 #define	MAXLINE		4096	/* max text line length */
 #define	LISTENQ		1024	/* 2nd argument to listen() */
 
@@ -33,8 +33,7 @@ void		Close(int);
 void	 	err_sys(const char *, ...);
 static void	err_doit(int, int, const char *, va_list);
 
-
-void		str_echo(int);
+void		str_echo(int, pid_t);
 
 
 void		Writen(int, void*, size_t);

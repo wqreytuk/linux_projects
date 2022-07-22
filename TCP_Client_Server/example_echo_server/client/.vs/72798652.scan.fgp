@@ -1,0 +1,16 @@
+-2145036073 C:\Users\x\linux_projects\TCP_Client_Server\example_echo_server\client\CMakeLists.txt
+-2144944052 C:\Users\x\linux_projects\TCP_Client_Server\example_echo_server\client\CMakePresets.json
+-2080825642 C:\Users\x\linux_projects\TCP_Client_Server\example_echo_server\client\tcpclient01.c
+-474797418 C:\Users\x\linux_projects\TCP_Client_Server\example_echo_server\client\
+-2144924255 C:\Users\x\linux_projects\TCP_Client_Server\example_echo_server\client\lib\CMakeLists.txt
+-2082948405 C:\Users\x\linux_projects\TCP_Client_Server\example_echo_server\client\lib\error.c
+-2082987435 C:\Users\x\linux_projects\TCP_Client_Server\example_echo_server\client\lib\readline.c
+-2082880041 C:\Users\x\linux_projects\TCP_Client_Server\example_echo_server\client\lib\str_cli.c
+-2082902699 C:\Users\x\linux_projects\TCP_Client_Server\example_echo_server\client\lib\str_echo.c
+315369356 C:\Users\x\linux_projects\TCP_Client_Server\example_echo_server\client\lib\unp.h
+-2082750823 C:\Users\x\linux_projects\TCP_Client_Server\example_echo_server\client\lib\wraplib.c
+-2082750823 C:\Users\x\linux_projects\TCP_Client_Server\example_echo_server\client\lib\wrapsock.c
+-2082789415 C:\Users\x\linux_projects\TCP_Client_Server\example_echo_server\client\lib\wrapstdio.c
+-2082681001 C:\Users\x\linux_projects\TCP_Client_Server\example_echo_server\client\lib\wrapunix.c
+-2082703654 C:\Users\x\linux_projects\TCP_Client_Server\example_echo_server\client\lib\writen.c
+1317589326 C:\Users\x\linux_projects\TCP_Client_Server\example_echo_server\client\lib\
