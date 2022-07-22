@@ -20,10 +20,13 @@ int main(int argc, char* argv[]) {
 	for (;;) {
 		clie_len = sizeof(cli_addr);
 		conn_fd = Accept(listen_fd, (SA*)&cli_addr, &clie_len);
-
+		printf("parent listen fd: %d\n", listen_fd);
+		printf("parent connection fd: %d\n", conn_fd);
 		if (0 == (child_pid = Fork())) {
 			Close(listen_fd);
 			str_echo(conn_fd);
+			printf("child listen fd: %d\n", listen_fd);
+			printf("child connection fd: %d\n", conn_fd);
 			exit(0);
 		}
 		Close(conn_fd);
