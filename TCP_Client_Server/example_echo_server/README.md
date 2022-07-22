@@ -35,4 +35,4 @@ while ((n = read(sockfd, buf, MAXLINE)) > 0)
 	Writen(sockfd, buf, n);
 ```
 
-当客户端断开连接的时候，`read`的返回值也就是读取出的字节数会变成0，跳出循环，子进程也就随之终止了
+when client drops or closes the connection, `read` will return 0, which is the bytes read from `sockfd`, then the while loop is break, so child process is terminated
