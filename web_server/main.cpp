@@ -16,29 +16,56 @@
 #define MAX_EVENT_NUMBER 10000  // 监听的最大的事件数量
 
 // 添加文件描述符
+// 下面这两个extern函数修饰的函数声明在当前文件所包含的头文件中是找不到的
+// 但是编译和链接阶段都不会报错，首先在编译的时候，编译器是无法找到这两个函数的实现的
+// 但是由于有extern关键字修饰，就没有报错，编译通过
+// 然后在链接阶段，链接器会在我们的liblib.a库文件中找到这两个函数，因此链接也没有问题
 extern void addfd(int epollfd, int fd, bool one_shot);
 extern void removefd(int epollfd, int fd);
 
 void addsig(int sig, void(handler)(int)) {
+    // 首先声明sigaction结构体变量
     struct sigaction sa;
+    // 初始化结构体，即清空
     memset(&sa, '\0', sizeof(sa));
+    // 开始填充结构体的各个成员、
+    // 首先是sa_handler成员，该成员存储的是信号处理回调函数
     sa.sa_handler = handler;
+    // sa_mask成员是一个__sigset_t类型的变量
+    // 可以往里面添加一系列的信号，这些被添加进去的信号将不会在sig_handler执行的时候触发sig_handler
+    // sigfillset函数会将所有的信号都添加到传给他的参数，也就是sa_mask中
     sigfillset(&sa.sa_mask);
+    // 这里加一个断言，如果sigaction报错的话直接终止程序
     assert(sigaction(sig, &sa, NULL) != -1);
 }
 
 int main(int argc, char* argv[]) {
 
+    // 程序为控制台应用程序，参数通过argv字符串数组传递进来
+    // argc为参数个数，argv字符串数组的第一个字符串总是本程序的完整路径
+    // 也就是说argc最小值是1，不可能为0
     if (argc <= 1) {
+        // 这里调用了库函数basename，用于从一个路径中取出文件名部分
         printf("usage: %s port_number\n", basename(argv[0]));
         return 1;
     }
 
+    // 本程序只接受一个参数，用于指定我们的webserver要监听到的端口
+    // 我们会bind到本地的所有网卡 -> INADDR_ANY
+    // 使用atoi库函数将字符串转换成int型
     int port = atoi(argv[1]);
+    // addsig是我们自定义的函数
+    // 接收两个参数，第一个是信号，第二个是信号的处理回调函数
+    // SIGPIPE是管道破裂的信号，SIG_IGN是系统定义的处理函数，就是忽略这个信号
+    // 我们进入到这个函数来复习一下信号的注册流程
+    // 这行代码就做了一件事，就是忽略SIGPIPE信号
     addsig(SIGPIPE, SIG_IGN);
 
+    // 这里threadpool是一个模板类
     threadpool< http_conn >* pool = NULL;
     try {
+        // 实例化模板类，使用try catch包围，如果出现异常，直接终止程序
+        // 我们来看一下这个模板类的构造函数都做了什么
         pool = new threadpool<http_conn>;
     }
     catch (...) {
