@@ -65,15 +65,24 @@ int main(int argc, char* argv[]) {
     threadpool< http_conn >* pool = NULL;
     try {
         // 实例化模板类，使用try catch包围，如果出现异常，直接终止程序
-        // 这里使用的是默认构造函数，我们并没有声明不包含参数的构造函数
+        // 这里使用的是默认构造函数
+        // 不含任何参数或者所有的参数都带有默认值的构造函数就是默认构造函数
+        // threadpool类中声明了一个带有默认参数的构造函数  
+        // threadpool(int thread_number = 8, int max_requests = 10000);
+        // 我们跟进去看看，这个构造函数都干了啥
+        // 好了，现在我们看完了构造函数，其实构造函数做的事情很简单
+        // 就是创建了一堆线程（默认是8个），线程回调函数就是从线程中取出请求
+        // 然后对请求进行处理，具体怎么处理的，我们稍后再讲
         pool = new threadpool<http_conn>;
     }
     catch (...) {
         return 1;
     }
 
+    // 初始化一个http_conn实例数组，数组长度为MAX_FD，即65536
     http_conn* users = new http_conn[MAX_FD];
 
+    // 创建套接字
     int listenfd = socket(PF_INET, SOCK_STREAM, 0);
 
     int ret = 0;

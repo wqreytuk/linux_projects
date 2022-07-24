@@ -501,7 +501,8 @@ bool http_conn::process_write(HTTP_CODE ret) {
 
 // 由线程池中的工作线程调用，这是处理HTTP请求的入口函数
 void http_conn::process() {
-    // 解析HTTP请求
+    // 解析HTTP请求、
+    // 我们来看一下process_read函数干了什么
     HTTP_CODE read_ret = process_read();
     if (read_ret == NO_REQUEST) {
         modfd(m_epollfd, m_sockfd, EPOLLIN);
