@@ -1,0 +1,6 @@
+/mnt/c/Users/x/Downloads/rufus/test/client/out/build/linux-debug/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/x/Downloads/rufus/test/client/out/build/linux-debug/CMakeFiles/edit_cache.dir
+/mnt/c/Users/x/Downloads/rufus/test/client/out/build/linux-debug/CMakeFiles/test.dir
+/mnt/c/Users/x/Downloads/rufus/test/client/out/build/linux-debug/lib/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/x/Downloads/rufus/test/client/out/build/linux-debug/lib/CMakeFiles/edit_cache.dir
+/mnt/c/Users/x/Downloads/rufus/test/client/out/build/linux-debug/lib/CMakeFiles/lib.dir

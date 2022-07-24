@@ -1,0 +1,6 @@
+C:/Users/x/linux_projects/TCP_Client_Server/example_echo_server/server/out/build/x64-debug/CMakeFiles/server.dir
+C:/Users/x/linux_projects/TCP_Client_Server/example_echo_server/server/out/build/x64-debug/CMakeFiles/edit_cache.dir
+C:/Users/x/linux_projects/TCP_Client_Server/example_echo_server/server/out/build/x64-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/x/linux_projects/TCP_Client_Server/example_echo_server/server/out/build/x64-debug/lib/CMakeFiles/lib.dir
+C:/Users/x/linux_projects/TCP_Client_Server/example_echo_server/server/out/build/x64-debug/lib/CMakeFiles/edit_cache.dir
+C:/Users/x/linux_projects/TCP_Client_Server/example_echo_server/server/out/build/x64-debug/lib/CMakeFiles/rebuild_cache.dir
