@@ -65,7 +65,7 @@ int main(int argc, char* argv[]) {
     threadpool< http_conn >* pool = NULL;
     try {
         // 实例化模板类，使用try catch包围，如果出现异常，直接终止程序
-        // 我们来看一下这个模板类的构造函数都做了什么
+        // 这里使用的是默认构造函数，我们并没有声明不包含参数的构造函数
         pool = new threadpool<http_conn>;
     }
     catch (...) {

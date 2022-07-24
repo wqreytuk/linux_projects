@@ -1,4 +1,11 @@
 {
+  "ExpandedNodes": [
+    "",
+    "\\lib",
+    "\\out"
+  ],
+  "SelectedNode": "\\main.cpp",
+  "PreviewInSolutionExplorer": false,
   "ActiveTargetSystem": "192.168.10.101",
   "MRUPresetsPerTargetSystem": {
     "本地计算机": {
@@ -13,12 +20,5 @@
     "WSL: Ubuntu": {
       "configure": "linux-debug"
     }
-  },
-  "ExpandedNodes": [
-    "",
-    "\\lib",
-    "\\out"
-  ],
-  "SelectedNode": "\\main.cpp",
-  "PreviewInSolutionExplorer": false
+  }
 }
