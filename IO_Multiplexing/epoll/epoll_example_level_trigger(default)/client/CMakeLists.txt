@@ -1,10 +1,10 @@
 ﻿cmake_minimum_required (VERSION 3.8)
 
-project ("test")
+project ("client")
 add_subdirectory(lib)
 
 list(APPEND EXTRA_LIBS lib)
 
-add_executable(test "main.cpp")
+add_executable(client "main.cpp")
 
-target_link_libraries(test PUBLIC pthread ${EXTRA_LIBS})
+target_link_libraries(client PUBLIC pthread ${EXTRA_LIBS})

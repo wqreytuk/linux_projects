@@ -762,6 +762,7 @@ int main()
                 // 我们一共就监听了两种描述符，除了lfd以外的全部是连接文件描述符
                 // 如果不是lfd，那肯定就是conn_fd了，所以直接读取到达的数据就行了
                 char buf[1024] = { 0 };
+                memset(buf, 1024, 0);
                 int len = read(curfd, buf, sizeof(buf));
                 if (-1 == len) {
                     perror("read");
@@ -776,6 +777,7 @@ int main()
                 }
                 else if (len > 0) {
                     printf("读取到数据：%s\n", buf);
+                    // 输出读取到的数据
                     write(curfd, buf, strlen(buf) + 1);
                 }
             }

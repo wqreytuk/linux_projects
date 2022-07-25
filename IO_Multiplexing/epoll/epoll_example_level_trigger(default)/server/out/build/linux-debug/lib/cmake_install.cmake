@@ -1,8 +1,8 @@
-# Install script for directory: /mnt/c/Users/x/Downloads/Rufus/test/lib
+# Install script for directory: /mnt/c/Users/x/linux_projects/IO_Multiplexing/epoll/epoll_example_level_trigger(default)/server/lib
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/mnt/c/Users/x/Downloads/Rufus/test/out/install/linux-debug")
+  set(CMAKE_INSTALL_PREFIX "/mnt/c/Users/x/linux_projects/IO_Multiplexing/epoll/epoll_example_level_trigger(default)/server/out/install/linux-debug")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
