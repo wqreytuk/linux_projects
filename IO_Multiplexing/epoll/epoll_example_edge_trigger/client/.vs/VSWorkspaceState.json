@@ -1,0 +1,24 @@
+{
+  "ActiveTargetSystem": "192.168.100.207",
+  "MRUPresetsPerTargetSystem": {
+    "本地计算机": {
+      "configure": "x64-debug"
+    },
+    "192.168.100.207": {
+      "configure": "linux-debug"
+    },
+    "192.168.10.101": {
+      "configure": "linux-debug"
+    },
+    "WSL: Ubuntu": {
+      "configure": "linux-debug"
+    }
+  },
+  "ExpandedNodes": [
+    "",
+    "\\lib",
+    "\\out"
+  ],
+  "SelectedNode": "\\CMakeLists.txt",
+  "PreviewInSolutionExplorer": false
+}
