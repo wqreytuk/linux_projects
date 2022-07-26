@@ -24,7 +24,9 @@ int setnonblocking(int fd) {
 // 向epoll中添加需要监听的文件描述符
 void addfd(int epollfd, int fd, bool one_shot) {
     epoll_event event;
+    // 填充epoll_event结构体
     event.data.fd = fd;
+    // 检测数据到达和客户端断开连接这两个事件
     event.events = EPOLLIN | EPOLLRDHUP;
     if (one_shot)
     {

@@ -101,6 +101,8 @@ int main(int argc, char* argv[]) {
     epoll_event events[MAX_EVENT_NUMBER];
     int epollfd = epoll_create(5);
     // 添加到epoll对象中
+    // 将listenfd添加到epoll中进行检测
+    // addfd函数是我们自己定义的函数，进去看看他干了啥
     addfd(epollfd, listenfd, false);
     http_conn::m_epollfd = epollfd;
 
