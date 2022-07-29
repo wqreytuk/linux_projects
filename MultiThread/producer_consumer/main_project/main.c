@@ -109,7 +109,7 @@ int main(int argc, char* argv[]) {
 	// 解锁
 	pthread_mutex_unlock(&BufferLock);
 
-	// 唤醒所有的条件变量，防止有线程因为一直等待信号量释放而无法正常退出
+	// 唤醒所有正在等待此条件变量的线程，防止有线程因为一直等待信号量释放而无法正常退出
 	pthread_cond_broadcast(&BufferNotEmpty);
 	pthread_cond_broadcast(&BufferNotFull);
 
